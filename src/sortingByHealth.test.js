@@ -1,4 +1,4 @@
-import sortByHealth from './src/sortingByHealth';
+import sortByHealth from './sortingByHealth';
 
 test('Проверка нарушенного порядка', () => {
   const result = sortByHealth([{ name: 'мечник', health: 10 }, { name: 'маг', health: 100 }]);
