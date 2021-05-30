@@ -12,3 +12,11 @@ test('Проверка undefined', () => {
   const result = sortByHealth(undefined);
   expect(result).toEqual('Невалидное значение');
 });
+test('Проверка, что toBe не сработает', () => {
+  const result = sortByHealth([{ name: 'мечник', health: 10 }, { name: 'маг', health: 100 }]);
+  try {
+    expect(result).toBe([{ name: 'маг', health: 100 }, { name: 'мечник', health: 10 }]);
+  } catch (e) {
+    console.log('Pass with deep euqality only' + e);
+  };
+})
