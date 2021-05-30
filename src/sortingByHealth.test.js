@@ -17,6 +17,6 @@ test('Проверка, что toBe не сработает', () => {
   try {
     expect(result).toBe([{ name: 'маг', health: 100 }, { name: 'мечник', health: 10 }]);
   } catch (e) {
-    console.log('Pass with deep euqality only' + e);
-  };
-})
+    console.warn(`Pass with deep euqality only${e}`);
+  }
+});
