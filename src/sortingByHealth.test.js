@@ -14,9 +14,5 @@ test('Проверка undefined', () => {
 });
 test('Проверка, что toBe не сработает', () => {
   const result = sortByHealth([{ name: 'мечник', health: 10 }, { name: 'маг', health: 100 }]);
-  try {
-    expect(result).toBe([{ name: 'маг', health: 100 }, { name: 'мечник', health: 10 }]);
-  } catch (e) {
-    console.warn(`Pass with deep euqality only${e}`);
-  }
+  expect(result).not.toBe([{ name: 'маг', health: 100 }, { name: 'мечник', health: 10 }]);
 });
